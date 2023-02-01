@@ -1,3 +1,5 @@
+package JTA;
+
 import org.json.JSONObject;
 import java.io.File;
 
@@ -10,7 +12,7 @@ public class Methods {
     public JSONObject setWebhook(String url){
         String Address = this.Address + "setWebhook";
         Post post = new Post(Address);
-        post.append("url", url + "/Telegram");
+        post.append("url", url + "/JTA.Telegram");
         return new JSONObject(post.start().toString());
     }
 

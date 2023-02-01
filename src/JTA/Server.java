@@ -1,3 +1,5 @@
+package JTA;
+
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpsConfigurator;
 import com.sun.net.httpserver.HttpsParameters;
@@ -22,7 +24,7 @@ public class Server {
         }
     }
 
-    void setJKS(File file ,String passwd){
+    public void setJKS(File file ,String passwd){
         try {
             SSLContext sslContext = SSLContext.getInstance("TLS");
 
@@ -64,20 +66,20 @@ public class Server {
         }
     }
 
-    void InputContext(String path, HttpHandler handler){
+    public void InputContext(String path, HttpHandler handler){
         server.createContext(path, handler);
     }
-    void InputCommand(Telegram command){
-        server.createContext("/Telegram", command);
+    public void InputCommand(Telegram command){
+        server.createContext("/JTA.Telegram", command);
         check[1] = true;
     }
-    void start(){
+    public void start(){
         if(!(check[0] && check[1])){
             throw new NotRunFunctionException();
         }
         server.start();
     }
-    void stop(){
+    public void stop(){
         server.stop(1);
     }
 }
