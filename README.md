@@ -1,4 +1,4 @@
-# Java JTA.Telegram API
+# Java Telegram API
 
 <h2>Overview</h2>
 
@@ -35,6 +35,12 @@ JTA.Methods 클래스에는 기본적인 TelegramAPI의 함수가 들어있습�
 import JTA.Methods;
 import JTA.Server;
 import JTA.Telegram;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
  public static void main(String[] args) throws IOException {
