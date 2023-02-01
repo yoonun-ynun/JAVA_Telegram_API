@@ -18,16 +18,16 @@ JTA.jsonpost : application/json<br>
 JTA.Post : application/x-www-form-urlencoded<br>
 JTA.Multipart : multipart/form-data<br>
 
-JTA.Server 클래스의 객체를 생성한 후 setJKS 함수로 jks 파일을 지정한 후 InputCommand 함수로 메시지가 들어왔을 때 실행할 내용을 넣으시면 됩니다. start 함수로 서버를 시작하며 stop 함수로 서버를 멈춥니다.<br>
+Server 클래스의 객체를 생성한 후 setJKS 함수로 jks 파일을 지정, InputCommand 함수로 메시지가 들어왔을 때 실행할 내용을 넣으시면 됩니다. start 함수로 서버를 시작하며 stop 함수로 서버를 멈춥니다.<br>
 만약 다른 페이지를 넣고싶다면 InputContext 함수를 이용하여 추가적으로 넣을 수 있습니다.
 <br>
 
-InputCommand 함수에 들어가는 객체의 경우 JTA.Telegram 클래스를 상속받은 클래스의 객체를 넣어주시면 됩니다.<br>
-JTA.Telegram 클래스 Command 함수를 오버라이딩 하는것으로 메시지가 들어왔을 때의 실행할 코드를 짤 수 있습니다.<br>
+InputCommand 함수에 들어가는 객체의 경우 Telegram 클래스를 상속받은 클래스의 객체를 넣어주시면 됩니다.<br>
+Telegram 클래스의 Command 함수를 오버라이딩 하는것으로 메시지가 들어왔을 때의 실행할 코드를 짤 수 있습니다.<br>
 Command 함수에는 모든 내용을 담고있는 JSONObject 클래스의 info 변수가 들어오며 chat_id, user_id, message_id, message, message_type, is_command에 대한 내용이 추가적으로 들어옵니다. message 변수의 경우 비디오, 포토 등의 메시지 타입이 들어와 메시지의 내용이 없으면
  null값이 들어오므로 NullPointerException 에 주의하여 주시기 바랍니다.
 
-JTA.Methods 클래스에는 기본적인 TelegramAPI의 함수가 들어있습니다. 앞으로 추가해 나갈 예정입니다.
+JTA.Methods 클래스에는 기본적인 Telegram API의 함수가 들어있습니다. 앞으로 추가해 나갈 예정입니다.
 
 <h3>example</h3>
 
