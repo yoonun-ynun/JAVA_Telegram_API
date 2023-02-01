@@ -94,5 +94,5 @@ public abstract class Telegram implements HttpHandler {
             Command(jObject, chat_id, user_id, message_id, message, message_type, is_command);
         }
     }
-    abstract void Command(JSONObject info, long chat_id, long user_id, long message_id, String message, String message_type, boolean is_command);
+    abstract public void Command(JSONObject info, long chat_id, long user_id, long message_id, String message, String message_type, boolean is_command);
 }

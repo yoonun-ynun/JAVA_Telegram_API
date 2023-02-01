@@ -57,7 +57,7 @@ class Input extends Telegram {
  Methods me = new Methods(token);
 
  @Override
- void Command(JSONObject info, long chat_id, long user_id, long message_id, String message, String message_type, boolean is_command) {
+ public void Command(JSONObject info, long chat_id, long user_id, long message_id, String message, String message_type, boolean is_command) {
   if (message != null && is_command) {
    String command = message.split(" ")[0];
    if (command.equals("/say")) {

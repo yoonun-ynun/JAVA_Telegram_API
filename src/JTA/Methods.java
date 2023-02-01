@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Methods {
     String Address;
-    Methods(String token){
+    public Methods(String token){
         Address = "https://api.telegram.org/bot" + token + "/";
     }
 
