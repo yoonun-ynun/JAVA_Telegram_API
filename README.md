@@ -5,7 +5,7 @@
 텔레그램 봇을 사용하기 위한 API 입니다.
 
 API를 사용하기 위해 json 라이브러리와 jks로 되어있는 SSL/TLS 인증서가 필요합니다.<br>
-웹훅을 위한 주소는 https://<hostname>/Telegram으로 설정되며
+웹훅을 위한 주소는 https://&lt;hostname&gt;/Telegram으로 설정되며
 <br>위 주소로 웹훅을 설정하시면 됩니다.
 
 기본적으로 443포트가 사용되지 않는 상태여야 합니다.
