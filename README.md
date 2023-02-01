@@ -30,6 +30,7 @@ Command 함수에는 모든 내용을 담고있는 JSONObject 클래스의 info 
 Methods 클래스에는 기본적인 TelegramAPI의 함수가 들어있습니다. 앞으로 추가해 나갈 예정입니다.
 
 <h3>example</h3>
+
 ```java
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -61,6 +62,7 @@ class Input extends Telegram{
         }
     }
 }
-
 ```
+
+
 /say 커맨드로 메시지를 보내면 봇이 따라하는 예제
